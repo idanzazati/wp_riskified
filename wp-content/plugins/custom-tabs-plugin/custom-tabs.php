@@ -7,8 +7,8 @@
  * Text Domain: custom-tabs
  */
 
+ // function for security
  if(!defined('ABSPATH')) {
-  // code for security
   exit;
  }
 
@@ -24,6 +24,7 @@
 
   public function load_assets() 
   {
+    // load css compiled
     wp_enqueue_style(
       'custom-tabs', 
       plugin_dir_url(__FILE__) . '../../../dist/style.css', 
@@ -32,8 +33,10 @@
       'all'
   );
 
+    // load font family
     wp_enqueue_style( 'typekit-fonts', 'https://use.typekit.net/wuz0gtr.css', array(), null );
 
+    // load js file
     wp_enqueue_script(
       'custom_tabs',
       plugin_dir_url( __FILE__ ) . 'js/custom-tabs.js',
@@ -51,7 +54,7 @@
       $custom_tabs_settings = pods('custom_tabs');
       
       if ($custom_tabs_settings->exists()) {
-          // Retrieve your custom fields once
+          // Retrieve the custom fields once
           $links = $custom_tabs_settings->field('link');
           $bg_image = $custom_tabs_settings->field('bg_image.guid');
           $bg_image_mobile = $custom_tabs_settings->field('bg_image_mobile.guid');
@@ -67,7 +70,7 @@
           $btn_icon = $custom_tabs_settings->field('btn_icon.guid');
           $logos = $custom_tabs_settings->field('logo.guid');
           
-          // Include your component file
+          // Include the component file
           include(plugin_dir_path(__FILE__) . 'views/tabs.php');
       }
   
