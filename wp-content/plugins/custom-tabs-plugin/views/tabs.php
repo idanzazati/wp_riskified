@@ -35,7 +35,7 @@
 
 		<div class="tabs__boxes__box tabs__boxes__box--right">
 			<div class="box-top">
-				<span class="percent"><?= $percentage ?></span>
+				<span class="percentage"><?= $percentage ?></span>
 				<p class="para"><?= $right_para ?></p>
 			</div>
 			<div class="box-bottom">
@@ -47,7 +47,7 @@
 		</div>
 	</div>
 	
-	<div class="logos">
+	<div class="tabs__logos">
 		<?php foreach($logos as $logo) { ?>
 			<div class="logos__logo">
 				<img src="<?= $logo ?>" alt="logo">
