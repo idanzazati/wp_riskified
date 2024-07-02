@@ -16,7 +16,10 @@
   public function __construct()
   {
     // add assets
-    add_action('wp_enqueue_scripts', array($this, 'load_assets')); 
+    add_action('wp_enqueue_scripts', array($this, 'load_assets'));
+
+    //add shortcode
+    add_shortcode('custom-tabs', array($this, 'load_shortcode'));
   }
 
   public function load_assets() 
@@ -38,6 +41,14 @@
       1,
       true
     );
+  }
+
+  public function load_shortcode() 
+  {
+    ob_start();
+    include plugin_dir_path(__FILE__) . 'views/tabs.php';
+    return ob_get_clean();
+
   }
 }
 
