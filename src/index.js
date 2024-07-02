@@ -1,0 +1,1 @@
+import '../wp-content/plugins/custom-tabs-plugin/css/custom-tabs.scss';
