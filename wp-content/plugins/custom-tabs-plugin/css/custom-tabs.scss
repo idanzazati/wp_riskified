@@ -33,12 +33,17 @@
         color: #CFD6DD;
         text-decoration: none;
 
+      &.active, 
       &:hover {
           color: #4c3eff;
           text-decoration: underline;
         }
       }
     }
+  }
+
+  .tab-content.active {
+    display: block;
   }
 
   &__boxes {
