@@ -26,7 +26,7 @@
   {
     wp_enqueue_style(
       'custom-tabs', 
-      plugin_dir_url(__FILE__) . 'css/custom-tabs.css',
+      plugin_dir_url(__FILE__) . '../../../dist/style.css', 
       array(), 
       '1.0.0', 
       'all'
