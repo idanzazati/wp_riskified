@@ -9,7 +9,4 @@
       <?php endwhile;else:endif;?>
 
 
-      <?php echo do_shortcode('[contact-form]');?>
-
-
 <?php get_footer();?>
